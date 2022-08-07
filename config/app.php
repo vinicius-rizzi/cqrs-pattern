@@ -195,6 +195,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Feature providers.
+         */
+        App\Company\CompanyFeatureProvider::class,
     ],
 
     /*
@@ -210,6 +214,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'CompanyFeature' => App\Support\Facades\CompanyFeature::class,
     ])->toArray(),
 
 ];
