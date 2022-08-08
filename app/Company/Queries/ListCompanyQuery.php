@@ -33,11 +33,6 @@ class ListCompanyQuery
             $query->where('company_id', $params->get('company_id'));
         }
 
-        return $query->paginate(
-            $params->get('per_page', 25),
-            ['*'],
-            'page',
-            $params->get('page', 1)
-        );
+        return $query->paginate($params->get('per_page', 25));
     }
 }
